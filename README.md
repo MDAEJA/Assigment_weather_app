@@ -12,7 +12,8 @@ This is a simple **Weather Application** built using **React** that allows users
 
 ## Demo
 
-![Weather App Screenshot](./weatherApp.png)
+![Weather App Screenshot](![Uploading weatherApp.png…]()
+)
 
 ## Technologies Used
 
