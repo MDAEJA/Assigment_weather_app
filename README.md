@@ -25,7 +25,7 @@ This is a simple **Weather Application** built using **React** that allows users
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/weather-app.git
+   git clone https://github.com/MDAEJA/Assigment_weather_app.git
    
 2. **Navigate to the project directory**:
    ```bash
