@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .app-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .app-header {
+    background-color: #4472c4;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .app-body {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+  }
+  
+  .app-sidebar {
+    width: 200px;
+    margin-right: 20px;
+  }
+  
+  .get-weather-btn {
+    background-color: #4472c4;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .city-list {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .city-list th, .city-list td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .city-list td.city-selected {
+    background-color: #a0d468;
+    pointer-events: none;
+  }
+  
+  .city-list tr:hover td {
+    background-color: #f2f2f2;
+  }
+  
+  .app-main {
+    flex: 1;
+  }
+  
+  .search-section {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .search-section input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1;
+    font-size: 1rem;
+  }
+  
+  .search-section button {
+    padding: 10px;
+    background-color: #4472c4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .weather-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .weather-table th, .weather-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .weather-table th {
+    background-color: #4472c4;
+    color: white;
+  }
+  
+  .weather-table tr:hover td {
+    background-color: #f2f2f2;
+  }
+  
+  .weather-table button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .app-header {
+      font-size: 1.3rem;
+      padding: 8px;
+    }
+  
+    .get-weather-btn {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+  
+    .city-list th, .city-list td {
+      font-size: 0.9rem;
+    }
+  
+    .search-section input, .search-section button {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+  
+    .weather-table th, .weather-table td {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+  
+    .weather-table button {
+      padding: 4px 8px;
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .app-body {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .app-sidebar {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .get-weather-btn {
+      font-size: 0.85rem;
+    }
+  
+    .city-list th, .city-list td {
+      font-size: 0.85rem;
+    }
+  
+    .search-section {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .search-section input {
+      width: 100%;
+    }
+  
+    .weather-table th, .weather-table td {
+      font-size: 0.85rem;
+    }
+  
+    .weather-table button {
+      padding: 4px 8px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .app-header {
+      font-size: 1.2rem;
+    }
+  
+    .app-body {
+      margin: 10px;
+    }
+  
+    .get-weather-btn {
+      font-size: 0.8rem;
+    }
+  
+    .city-list th, .city-list td {
+      font-size: 0.8rem;
+    }
+  
+    .search-section input, .search-section button {
+      font-size: 0.8rem;
+    }
+  
+    .weather-table th, .weather-table td {
+      font-size: 0.8rem;
+    }
+  
+    .weather-table button {
+      padding: 3px 6px;
+    }
+  }
+  @media (max-width: 375px) {
+    .app-header {
+      font-size: 1.1rem;
+      padding: 6px;
+    }
+  
+    .get-weather-btn {
+      font-size: 0.75rem;
+      padding: 8px;
+    }
+  
+    .city-list th, .city-list td {
+      font-size: 0.75rem;
+      padding: 6px;
+    }
+  
+    .search-section input, .search-section button {
+      font-size: 0.75rem;
+      padding: 6px;
+    }
+  
+    .weather-table th, .weather-table td {
+      font-size: 0.75rem;
+      padding: 6px;
+    }
+  
+    .weather-table button {
+      padding: 4px 6px;
+      font-size: 0.7rem;
+    }
+    
+    .app-body {
+      margin: 10px 5px;
+    }
+  
+    .search-section {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .search-section input, .search-section button {
+      width: 100%;
+    }
+  }
+  
+  /* Extra for 320px width */
+  @media (max-width: 320px) {
+    .app-header {
+      font-size: 1rem;
+      padding: 5px;
+    }
+  
+    .get-weather-btn {
+      font-size: 0.7rem;
+      padding: 6px;
+    }
+  
+    .city-list th, .city-list td {
+      font-size: 0.7rem;
+      padding: 5px;
+    }
+  
+    .search-section input, .search-section button {
+      font-size: 0.7rem;
+      padding: 5px;
+    }
+  
+    .weather-table th, .weather-table td {
+      font-size: 0.7rem;
+      padding: 5px;
+    }
+  
+    .weather-table button {
+      padding: 3px 5px;
+      font-size: 0.65rem;
+    }
+  
+    .app-body {
+      margin: 5px;
+    }
+  
+    .app-sidebar {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .search-section {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .search-section input, .search-section button {
+      width: 100%;
+    }
+  }
